@@ -2,6 +2,16 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  if ENV["CODESPACES"] == "true"
+    # Add the Codespace domain to the list of allowed hosts.
+    # Alternatively, if you prefer simplicity, you could `config.hosts.clear` instead.
+    #
+    codespaces_port_forwarding_domain = ENV["GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN"]
+    codespace_name = ENV["CODESPACE_NAME"]
+    host = "opulent-tribble-97jw9pxjwqjc77gv-3000.github.dev"
+
+    config.hosts << host
+  end
 
   # Make code changes take effect immediately without server restart.
   config.enable_reloading = true
