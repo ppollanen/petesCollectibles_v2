@@ -1,0 +1,10 @@
+<h1>Comics#index</h1>
+<%= link_to "New comic", new_comic_path %>
+
+<div id="comics">
+  <% @comics.each do |comic| %>
+    <div>
+      <%= link_to comic.series, comic_path(comic.id) %>
+    </div>
+  <% end %>
+</div>
