@@ -8,7 +8,7 @@ Rails.application.configure do
     #
     codespaces_port_forwarding_domain = ENV["GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN"]
     codespace_name = ENV["CODESPACE_NAME"]
-    host = "opulent-tribble-97jw9pxjwqjc77gv-3000.github.dev"
+    host = "opulent-tribble-97jw9pxjwqjc77gv-3000.app.github.dev"
 
     config.hosts << host
   end
