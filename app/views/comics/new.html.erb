@@ -1,14 +1,4 @@
 <h1>New comic</h1>
 
-<%= form_with model: @comic do |form| %>
-  <div>
-    <%= form.label :series %>
-    <%= form.text_field :series %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
-
+<%= render "form", comic: @comic %>
 <%= link_to "Cancel", comics_path %>
