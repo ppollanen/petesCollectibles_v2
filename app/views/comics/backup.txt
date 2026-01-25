@@ -1,3 +1,5 @@
+<h1>Edit comic</h1>
+
 <%= form_with model: comic do |form| %>
   <% if form.object.errors.any? %>
     <p class="error"><%= form.object.errors.full_messages.first %></p>
@@ -19,3 +21,18 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<%= link_to "Cancel", @comic %>
+
+
+
+
+
+
+Show
+<h1><%= @comic.series %></h1>
+
+<%= render "form", comic: @comic %>
+
+<%= link_to "Back", comics_path %>
+<%= link_to "Edit", edit_comic_path(@comic) %>

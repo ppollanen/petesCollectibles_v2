@@ -1,7 +1,5 @@
 <h1>Comics</h1>
 <%= link_to "New comic", new_comic_path %>
-<h1>Comics</h1>
-<%= link_to "New comic", new_comic_path %>
 
 <table class="table">
   <thead>
@@ -45,7 +43,7 @@
           <%= comic.price %>
         </td>
         <td>
-          <a href="/comics/<%= comic.id %>">Details</a>
+          <a href="/comics/<%= comic.id %>/edit">Edit</a>
         </td>
       </tr>
   <% end %>

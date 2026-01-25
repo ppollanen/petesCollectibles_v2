@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   # root "posts#index"
   #
   root "comics#index"
+  # get "/comics", to: "comics#index"
+  # get "/comics/new", to: "comics#new"
   resources :comics
 
 end

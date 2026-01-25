@@ -20,8 +20,21 @@ class ComicsController < ApplicationController
     end
   end
 
+  def edit
+    @comic = Comic.find(params[:id])
+  end
+
+  def update
+    @comic = Comic.find(params[:id])
+    if @comic.update(comic_params)
+      redirect_to @comic
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
     def comic_params
-      params.expect(comic: [ :series ])
+      params.expect(comic: [ :series, :title, :issue, :published, :price ])
     end
 end
