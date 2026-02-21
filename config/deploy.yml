@@ -89,7 +89,8 @@ builder:
   # remote: ssh://docker@docker-builder-server
   #
   # # Pass arguments and secrets to the Docker build process
-  # args:
+  args:
+    DOCKER_API_VERSION: 1.43
   #   RUBY_VERSION: ruby-3.3.10
   # secrets:
   #   - GITHUB_TOKEN
