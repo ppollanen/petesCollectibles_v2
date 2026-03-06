@@ -14,7 +14,8 @@ class ComicsController < ApplicationController
   def create
     @comic = Comic.new(comic_params)
     if @comic.save
-      redirect_to @comic
+      # redirect_to @comic
+      redirect_to action: 'index'
     else
       render :new, status: :unprocessable_entity
     end
