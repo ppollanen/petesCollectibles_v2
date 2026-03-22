@@ -1,5 +1,5 @@
-<h1>Comics</h1>
-<%= link_to "New comic", new_comic_path %>
+<p>
+<%= button_to "New comic", new_comic_path, :method => "get" %>
 
 <table class="table">
   <thead>
@@ -49,3 +49,4 @@
   <% end %>
   </tbody>
 </table>
+<%= button_to "New comic", new_comic_path, :method => "get" %>

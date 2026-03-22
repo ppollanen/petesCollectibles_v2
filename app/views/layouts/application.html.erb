@@ -26,9 +26,13 @@
 
   <body>
     <header>
-        <h2>PetesCollectibles v2</h2>
-        <%= link_to "Home", root_path %>
-        <%= button_to "Log out", session_path, method: :delete if authenticated? %>
+      <table style="border: 0px; border-collapse: collapse; width: 100%">
+        <tr style="border: 0px">
+          <td style="width: 25%; border: 0px"></td>
+          <td style="text-align:center; width:50%; border: 0px"> <h2>PetesCollectibles v2</h2> </td>
+          <td style="text-align:right; width:25%; border: 0px"> <%= button_to "Log out", session_path, method: :delete if authenticated? %> </td>
+        </tr>
+      </table>
     </header>
     <%= yield %>
   </body>
