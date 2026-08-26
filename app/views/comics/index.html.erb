@@ -40,7 +40,7 @@
           <%= comic.published %>
         </td>
         <td>
-          <%= comic.price %>
+          <%= number_to_currency(comic.price, unit: "€ ") %>
         </td>
         <td>
           <a href="/comics/<%= comic.id %>/edit">Edit</a>
