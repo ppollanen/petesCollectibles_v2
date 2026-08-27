@@ -37,7 +37,7 @@
           <%= comic.issue %>
         </td>
         <td>
-          <%= comic.published %>
+          <%= comic.published.strftime('%Y-%m') %>
         </td>
         <td>
           <%= number_to_currency(comic.price, unit: "€ ") %>
