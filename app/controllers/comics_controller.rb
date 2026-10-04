@@ -1,6 +1,6 @@
 class ComicsController < ApplicationController
   def index
-    @comics = Comic.all
+    @comics = Comic.all.order(issue: :asc)
   end
 
   def show
